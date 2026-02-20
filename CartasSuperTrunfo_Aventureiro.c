@@ -16,12 +16,14 @@ int main() {
 
    printf("Digite o Estado:\n");
    fgets(estadoA, sizeof(estadoA), stdin);
- 
+   //estadoA[strcspn(estadoA, "\n")] = '\0'; // Remove o caractere de nova linha
+
    printf("Digite o Codigo da carta:\n");
    scanf("%s", codigodacartaA);
 
    printf("Digite o Nome da Cidade:\n");
    fgets(nomedacidadeA, sizeof(nomedacidadeA), stdin);
+   //nomedacidadeA[strcspn(nomedacidadeA, "\n")] = '\0'; // Remove o caractere de nova linha
 
    printf("Digite a População:\n");
    scanf("%d", &populacaoA);
@@ -64,13 +66,13 @@ printf("CARTA B:\n");
 
 
    printf("Digite o Estado:\n");
-   fgets(estadoB, sizeof(estadoB), stdin);
+   scanf("%s", estadoB);
  
    printf("Digite o Codigo da carta:\n");
    scanf("%s", codigodacartaB);
 
    printf("Digite o Nome da Cidade:\n");
-   fgets(nomedacidadeB, sizeof(nomedacidadeB), stdin);
+   scanf("%s", nomedacidadeB);
 
    printf("Digite a População:\n");
    scanf("%d", &populacaoB);
